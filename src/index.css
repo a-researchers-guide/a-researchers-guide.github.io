@@ -97,7 +97,7 @@
   }
 
   section {
-    @apply min-h-[80vh];
+    /* @apply min-h-[80vh]; */
     /* debug only */
   }
 }

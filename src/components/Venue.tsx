@@ -26,7 +26,7 @@ const MapContent = () => {
   return (
     <div className="relative max-w-xl" ref={containerRef}>
       <UniMap svgRef={svgRef} />
-      <Anchor x={600} y={330} name="Civil Auditorium" />
+      <Anchor x={600} y={340} name="Civil Auditorium" />
       <Anchor x={405} y={630} name="University Entrance" />
     </div>
   );
