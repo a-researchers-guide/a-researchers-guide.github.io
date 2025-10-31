@@ -6,15 +6,17 @@ import UniMap from "./map/UniMap";
 const Venue: FC = () => {
   return (
     <section className="container mx-auto">
-      <div className="space-y-4">
-        <h2 className="heading-2 text-center">
-          Meet us at <span className="text-primary">Civil Auditorium</span>
-        </h2>
-      </div>
-      <div className="flex">
-        <MapProvider>
-          <MapContent />
-        </MapProvider>
+      <div>
+        <div className="space-y-4">
+          <h2 className="heading-2 text-center">
+            Meet us at <span className="text-primary">Civil Auditorium</span>
+          </h2>
+        </div>
+        <div className="flex">
+          <MapProvider>
+            <MapContent />
+          </MapProvider>
+        </div>
       </div>
     </section>
   );

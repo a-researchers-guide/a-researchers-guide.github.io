@@ -32,7 +32,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
       <div className="absolute inset-0 -z-10 opacity-50 masked--vertical">
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
-      <section className="grid min-h-[70vh] items-center gap-10 py-20 px-4 container mx-auto lg:grid-cols-2">
+      <section className="grid min-h-[50vh] items-center gap-10 py-20 px-4 container mx-auto lg:grid-cols-2">
         <div className="space-y-4">
           <SplitText
             tag="h1"

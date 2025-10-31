@@ -80,7 +80,7 @@ const Magnet: React.FC<MagnetProps> = ({
     <div {...props} className={cn("relative w-fit", props.className)}>
       <div
         ref={magnetRef}
-        className="absolute rounded-full aspect-square top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute rounded-full aspect-3/2 w-[120%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         style={{
           width: padding,
         }}

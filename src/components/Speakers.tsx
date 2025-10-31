@@ -6,7 +6,7 @@ const Speakers: FC = () => {
     <section className="container mx-auto my-20">
       <div className="space-y-4">
         <h2 className="heading-2 text-center">
-          Meet our <span className="text-primary">Speakers</span>
+          Our <span className="text-primary">Speakers</span>
         </h2>
         <p className="text-center max-w-prose mx-auto opacity-60">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita

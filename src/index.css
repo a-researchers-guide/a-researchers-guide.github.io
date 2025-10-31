@@ -48,8 +48,8 @@
   --radius: 0.625rem;
   --background: hsl(128, 36%, 4%);
   --foreground: oklch(100% 0.00011 271.152);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card: oklch(22.919% 0.03621 191.911);
+  --card-foreground: oklab(100% 0 -0.00011);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklab(79.37% -0.17797 0.08312);
@@ -97,7 +97,7 @@
   }
 
   section {
-    /* @apply min-h-[80vh]; */
+    @apply min-h-[60vh];
     /* debug only */
   }
 }
