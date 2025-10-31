@@ -97,7 +97,7 @@
   }
 
   section {
-    @apply min-h-screen;
+    @apply min-h-[80vh];
     /* debug only */
   }
 }

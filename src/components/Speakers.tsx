@@ -16,7 +16,7 @@ const Speakers: FC = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 place-items-center mt-10 lg:gap-32 w-fit mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center mt-10 lg:gap-32 w-fit mx-auto">
         <SpeakerCard />
         <SpeakerCard />
         <SpeakerCard />

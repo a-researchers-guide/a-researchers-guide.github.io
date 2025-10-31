@@ -6,13 +6,15 @@ type SpeakerCardProps = {};
 const SpeakerCard: FC<SpeakerCardProps> = ({}) => {
   return (
     <div className="max-w-sm">
-      <div className="flex relative w-full border-4 border-primary rounded-full aspect-square mx-auto mb-6">
-        <img
-          src="./anusha.webp"
-          className="rounded-full overflow-hidden object-cover"
-          alt="Dr. Anusha Withana"
-        />
-        <div className="absolute bottom-0 right-0 text-6xl bg-primary text-primary-foreground p-8 rounded-full">
+      <div className="relative">
+        <div className="flex w-full overflow-hidden  border-4 border-primary rounded-full aspect-square mx-auto mb-6">
+          <img
+            src="./anusha.webp"
+            className="rounded-full object-cover object-bottom hover:scale-125 will-change-transform transition-transform duration-300 ease-in-out"
+            alt="Dr. Anusha Withana"
+          />
+        </div>
+        <div className="absolute bottom-0 right-0 text-4xl bg-primary text-primary-foreground p-8 rounded-full">
           <SolarMicrophone2Linear />
         </div>
       </div>

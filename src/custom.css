@@ -18,3 +18,14 @@
     rgba(0, 0, 0, 0) 100%
   );
 }
+.uni-map #roads path {
+  stroke: var(--primary);
+}
+.uni-map :where(#buildings path) {
+  stroke: color-mix(in oklab, var(--primary) 50%, transparent);
+  fill: color-mix(in oklab, var(--primary) 20%, transparent);
+}
+
+.uni-map .civilAuditorium {
+  fill: var(--primary);
+}
