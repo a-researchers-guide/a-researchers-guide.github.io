@@ -81,9 +81,23 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 box-content;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .heading-2 {
+    @apply text-2xl lg:text-[54px] md:text-4xl font-medium;
+  }
+  .heading-3 {
+    @apply text-xl lg:text-[32px] md:text-2xl font-medium;
+  }
+  .heading-4 {
+    @apply text-lg lg:text-[24px] md:text-xl font-medium;
+  }
+
+  section {
+    @apply min-h-screen;
+    /* debug only */
   }
 }
