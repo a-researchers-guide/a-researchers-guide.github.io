@@ -49,7 +49,7 @@
   --radius: 0.625rem;
   --background: hsl(128, 36%, 4%);
   --foreground: oklch(100% 0.00011 271.152);
-  --card: oklch(22.919% 0.03621 191.911);
+  --card: oklch(26.654% 0.04849 168.073);
   --card-foreground: oklab(100% 0 -0.00011);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -85,7 +85,15 @@
     @apply border-border outline-ring/50 box-content;
   }
   body {
-    @apply bg-background text-foreground;
+    background: linear-gradient(
+        to right,
+        color-mix(in oklab, var(--background) 70%, transparent),
+        color-mix(in oklab, var(--background) 70%, transparent)
+      ),
+      url("http://localhost:5173/sb-moratuwa-embs/grain.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover, 400px 400px;
+    color: var(--foreground);
   }
   .heading-2 {
     @apply text-2xl lg:text-[54px] md:text-4xl font-medium;

@@ -19,7 +19,7 @@ const CTA: FC = () => {
         gyroControls: false,
         scale: 2.5,
         color1: 0x0,
-        color2: 0x70706e,
+        color2: 0x25e3a7,
         size: 2,
         speed: 0.5,
       });
@@ -28,7 +28,7 @@ const CTA: FC = () => {
   const isRegClosed = new Date() > EVENT_REGISTRATION_END;
   return (
     <div className="relative min-h-[80vh] grid place-items-center">
-      <div className="absolute inset-0 -z-10 opacity-30 masked--vertical">
+      <div className="absolute inset-0 -z-10 opacity-12 masked--vertical">
         <div className="absolute size-full" id="CTASection"></div>
       </div>
       <section className="container mx-auto my-20">

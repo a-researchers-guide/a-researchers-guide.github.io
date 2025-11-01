@@ -21,14 +21,14 @@ const HeroSection: FC<HeroSectionProps> = () => {
         gyroControls: false,
         scale: 2.5,
         color1: 0x0,
-        color2: 0x70706e,
+        color2: 0x25e3a7,
         size: 2,
         speed: 0.5,
       });
   }, []);
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 opacity-50 masked--vertical">
+      <div className="absolute inset-0 -z-10 opacity-20 masked--vertical">
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
       <section className="grid min-h-[50vh] items-center gap-10 py-20 px-4 container mx-auto lg:grid-cols-2">
