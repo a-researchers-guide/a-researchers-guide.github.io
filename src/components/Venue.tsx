@@ -9,7 +9,7 @@ const Venue: FC = () => {
     <section className="container mx-auto my-20">
       <div>
         <div className="space-y-4">
-          <h2 className="heading-2 text-center">
+          <h2 className="heading-2 text-center font-serif">
             Meet us at <span className="text-primary">Civil Auditorium</span>
           </h2>
         </div>

@@ -5,7 +5,7 @@ const Speakers: FC = () => {
   return (
     <section className="container mx-auto my-20">
       <div className="space-y-4">
-        <h2 className="heading-2 text-center">
+        <h2 className="heading-2 text-center font-serif">
           Our <span className="text-primary">Speakers</span>
         </h2>
         <p className="text-center max-w-prose mx-auto opacity-60">

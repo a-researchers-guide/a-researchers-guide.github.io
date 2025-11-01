@@ -33,7 +33,7 @@ const CTA: FC = () => {
       </div>
       <section className="container mx-auto my-20">
         <div className="space-y-4">
-          <h2 className="heading-2 text-center">
+          <h2 className="heading-2 text-center font-serif">
             Register <span className="text-primary">Now</span>
           </h2>
         </div>
