@@ -2,7 +2,6 @@ import NumberFlow from "@number-flow/react";
 import { ChevronRightIcon } from "lucide-react";
 import { useEffect, type FC } from "react";
 import Countdown, { type CountdownRendererFn } from "react-countdown";
-import Magnet from "./Magnet";
 import { Button } from "./ui/button";
 import { EVENT_REGISTRATION_END } from "@/consts/event";
 
@@ -46,13 +45,9 @@ const CTA: FC = () => {
           )}
           <Countdown date={EVENT_REGISTRATION_END} renderer={renderer} />
         </div>
-        <Magnet
-          disabled={isRegClosed}
-          padding={400}
-          pullFactor={2}
-          className="mt-10 mx-auto"
-        >
-          <Button disabled={isRegClosed} size={"lg"} className="pl-12!">
+
+        <div className="mx-auto block w-fit">
+          <Button disabled={isRegClosed} size={"lg"} className="pl-12! ">
             {isRegClosed ? (
               <>Registration Closed</>
             ) : (
@@ -62,7 +57,7 @@ const CTA: FC = () => {
               </>
             )}
           </Button>
-        </Magnet>
+        </div>
       </section>
     </div>
   );

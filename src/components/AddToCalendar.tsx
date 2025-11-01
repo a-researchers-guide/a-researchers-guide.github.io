@@ -1,10 +1,9 @@
+import { EVENT_END, EVENT_START } from "@/consts/event";
+import { downloadICS } from "@/lib/downloadICS";
 import { CalendarDaysIcon, PlusIcon } from "lucide-react";
 import type { FC } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import Magnet from "./Magnet";
-import { downloadICS } from "@/lib/downloadICS";
-import { EVENT_END, EVENT_START } from "@/consts/event";
 
 const AddToCalendar: FC = () => {
   return (
@@ -21,11 +20,10 @@ const AddToCalendar: FC = () => {
               Click the button below to Download the event details and add them
               to your calendar application. So you won't miss out!
             </p>
-            <Magnet padding={200} pullFactor={1}>
-              <Button onClick={() => downloadICS(EVENT_START, EVENT_END)}>
-                <PlusIcon /> Add to Calendar
-              </Button>
-            </Magnet>
+
+            <Button onClick={() => downloadICS(EVENT_START, EVENT_END)}>
+              <PlusIcon /> Add to Calendar
+            </Button>
           </div>
         </div>
       </CardContent>

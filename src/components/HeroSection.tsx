@@ -1,6 +1,5 @@
 import { useEffect, type FC } from "react";
 import { Button } from "./ui/button";
-import Magnet from "./Magnet";
 import SplitText from "./SplitText";
 
 declare global {
@@ -47,9 +46,10 @@ const HeroSection: FC<HeroSectionProps> = () => {
             Blanditiis, cum. Reiciendis aliquid eos minima eum quo velit beatae
             eaque eius.
           </p>
-          <Magnet padding={400} pullFactor={2} className="mt-10">
-            <Button size={"lg"}>Register Now</Button>
-          </Magnet>
+
+          <Button size={"lg"} className="mt-10">
+            Register Now
+          </Button>
         </div>
         <div></div>
       </section>
