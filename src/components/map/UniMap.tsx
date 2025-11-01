@@ -18,7 +18,7 @@ const UniMap = ({
     strokeLinecap="round"
     strokeLinejoin="round"
     preserveAspectRatio="xMidYMid meet"
-    className={cn("uni-map", className)}
+    className={cn("uni-map w-full max-h-[500px]", className)}
     ref={svgRef}
     {...props}
   >

@@ -2,21 +2,50 @@ import { type FC } from "react";
 import Anchor from "./map/Anchor";
 import { MapProvider, useMap } from "./map/MapProvider";
 import UniMap from "./map/UniMap";
+import AddToCalendar from "./AddToCalendar";
 
 const Venue: FC = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto my-20">
       <div>
         <div className="space-y-4">
           <h2 className="heading-2 text-center">
             Meet us at <span className="text-primary">Civil Auditorium</span>
           </h2>
         </div>
-        <div className="flex">
-          <MapProvider>
-            <MapContent />
-          </MapProvider>
+        <div className="flex items-center">
+          <div className="w-full max-w-xl">
+            <MapProvider>
+              <MapContent />
+            </MapProvider>
+          </div>
+          <div className="flex gap-10 my-20 w-fit mx-auto">
+            <div className="relative">
+              <div className="text-[140px] font-medium scale-y-150 leading-[200px] mb-5 whitespace-nowrap">
+                13 DEC
+              </div>
+              <div className="absolute text-5xl w-fit right-5 -bottom-4 mt-2 text-foreground/60">
+                2025
+              </div>
+            </div>
+            <div className="text-3xl flex flex-col justify-between gap-5 w-full max-w-xs relative">
+              <div className="absolute border-r-2 border-dashed h-full right-20 -z-10 border-primary/30"></div>
+              <div className="flex gap-3 w-full justify-between items-center text-foreground/60">
+                FROM{" "}
+                <div className="bg-primary text-primary-foreground px-5 py-3 rounded-full">
+                  10:00 AM
+                </div>
+              </div>
+              <div className="flex gap-3 w-full justify-between items-center text-foreground/60">
+                TO{" "}
+                <div className="bg-primary text-primary-foreground px-5 py-3 rounded-full">
+                  02:00 PM
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <AddToCalendar />
       </div>
     </section>
   );
@@ -26,7 +55,7 @@ const MapContent = () => {
   const { svgRef, containerRef } = useMap();
 
   return (
-    <div className="relative max-w-xl" ref={containerRef}>
+    <div className="relative w-full" ref={containerRef}>
       <UniMap svgRef={svgRef} />
       <Anchor x={600} y={340} name="Civil Auditorium" />
       <Anchor x={405} y={630} name="University Entrance" />
