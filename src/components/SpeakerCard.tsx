@@ -14,13 +14,15 @@ const SpeakerCard: FC<SpeakerCardProps> = ({}) => {
             alt="Dr. Anusha Withana"
           />
         </div>
-        <div className="absolute bottom-0 right-0 text-4xl bg-primary text-primary-foreground p-8 rounded-full">
+        <div className="absolute bottom-0 right-0 text-xl md:text-4xl bg-primary text-primary-foreground p-4 md:p-8 rounded-full">
           <SolarMicrophone2Linear />
         </div>
       </div>
       <div>
-        <h3 className="heading-3 text-center">Dr Anusha Withana</h3>
-        <p className="text-center opacity-60">
+        <h3 className="heading-3 text-center md:text-3xl mb-2">
+          Dr Anusha Withana
+        </h3>
+        <p className="text-center opacity-60 text-xs text-balance md:text-sm lg:text-base lg:text-wrap">
           PhD (Keio, Japan), MDes (Keio, Japan), BSc (Hons)
         </p>
       </div>

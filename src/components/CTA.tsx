@@ -56,7 +56,7 @@ const CTA: FC = () => {
             ) : (
               <>
                 <span className="mr-2 md:mr-4">Register Now</span>
-                <ChevronRightIcon className="md:size-8 bg-black text-primary  p-2 md:p-4 rounded-full" />
+                <ChevronRightIcon className="size-8 md:size-16 bg-black text-primary p-2 md:p-4 rounded-full" />
               </>
             )}
           </Button>
