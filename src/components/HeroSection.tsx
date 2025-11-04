@@ -31,17 +31,27 @@ const HeroSection: FC<HeroSectionProps> = () => {
       <div className="absolute inset-0 -z-10 opacity-20 masked--vertical">
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
-      <section className="grid min-h-[50vh] items-center gap-10 py-20 px-4 container mx-auto lg:grid-cols-2">
-        <div className="space-y-4">
-          <SplitText
-            tag="h1"
-            text="Lorem ipsum dolor sit amet."
-            className="max-w-7xl text-balance font-black uppercase leading-[76px] lg:text-[85px]"
-            textAlign="left"
-            duration={1}
-            stagger={0.02}
-          />
-          <p>
+      <section className="grid lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto lg:grid-cols-2">
+        <div className="space-y-4 text-center lg:text-left">
+          <h1 className="text-4xl lg:leading-[76px] lg:text-[85px] font-black uppercase">
+            <SplitText
+              tag="div"
+              text="Lorem ipsum"
+              className="max-w-7xl w-fit mx-auto lg:mx-0  lg:h-[85px]"
+              textAlign="left"
+              duration={1}
+              stagger={0.02}
+            />
+            <SplitText
+              tag="div"
+              text="dolor sit amet."
+              className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[85px]"
+              textAlign="left"
+              duration={1}
+              stagger={0.02}
+            />
+          </h1>
+          <p className="max-w-prose mx-auto lg:mx-0 text-balance">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Blanditiis, cum. Reiciendis aliquid eos minima eum quo velit beatae
             eaque eius.

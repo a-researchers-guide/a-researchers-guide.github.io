@@ -106,7 +106,7 @@
   }
 
   section {
-    @apply md:min-h-[60vh];
+    @apply lg:min-h-[60vh];
     /* debug only */
   }
 }

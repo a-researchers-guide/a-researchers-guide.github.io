@@ -19,7 +19,7 @@ const Venue: FC = () => {
               <MapContent />
             </MapProvider>
           </div>
-          <div className="w-fit mx-auto mt-10 lg:mt-0">
+          <div className="w-fit mx-auto mt-20 lg:mt-0">
             <h2 className="heading-2 text-center font-serif lg:hidden">
               <span className="text-primary">When?</span>
             </h2>

@@ -4,7 +4,7 @@ import { motion, type Variants, type Easing } from "framer-motion";
 export interface SplitTextProps {
   text: string;
   className?: string;
-  tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
+  tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
   textAlign?: React.CSSProperties["textAlign"];
   stagger?: number;
   delay?: number;
@@ -12,6 +12,7 @@ export interface SplitTextProps {
   ease?: Easing | Easing[];
   from?: Variants["hidden"];
   to?: Variants["visible"];
+  animationDelay?: number;
 }
 
 const SplitText: React.FC<SplitTextProps> = ({
@@ -49,7 +50,7 @@ const SplitText: React.FC<SplitTextProps> = ({
 
   return (
     <Tag
-      className={`split-parent overflow-hidden whitespace-normal ${className}`}
+      className={`overflow-hidden whitespace-normal ${className}`}
       style={{ textAlign, willChange: "transform, opacity" }}
     >
       <motion.span
@@ -57,6 +58,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         initial="hidden"
         animate="visible"
         aria-hidden
+        style={{ display: "inline" }}
       >
         {text.split(" ").map((word, wordIndex) => (
           <span key={wordIndex} className="inline-block">
@@ -65,6 +67,7 @@ const SplitText: React.FC<SplitTextProps> = ({
                 key={charIndex}
                 variants={childVariants}
                 className="inline-block"
+                style={{ display: "inline-block" }}
               >
                 {char}
               </motion.span>
