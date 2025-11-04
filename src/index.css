@@ -96,7 +96,7 @@
     color: var(--foreground);
   }
   .heading-2 {
-    @apply text-2xl lg:text-[54px] md:text-4xl font-medium;
+    @apply text-4xl lg:text-[54px] md:text-5xl font-medium;
   }
   .heading-3 {
     @apply text-xl lg:text-[32px] md:text-2xl font-medium;
