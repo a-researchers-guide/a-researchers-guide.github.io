@@ -19,23 +19,43 @@ const Speakers: FC = () => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 place-items-start mt-10 lg:gap-32 w-fit mx-auto">
         <SpeakerCard
           name="Prof. Hideki Koike"
-          title="Prof. of School of Computing, Tokyo Institute of Technology"
-          imageSrc="./Hideki-Koike.png"
+          title={
+            <>
+              Professor, School of Computing, <br /> Tokyo Institute of
+              Technology
+            </>
+          }
+          imageSrc="./koike.jpg"
         />
         <SpeakerCard
           name="Prof. Alistair McEwan"
-          title="BE/BComm MEng(Res), Sydney, Australia. PhD, Oxford, UK. MIEEE"
+          title={
+            <>
+              Associate Head of School of Biomedical Engineering, <br /> The
+              University of Sydney
+            </>
+          }
           imageSrc="./Alistair.jpeg"
         />
         <SpeakerCard
           name="Prof. Masahiko Inami"
-          title="Professor, RCAST, UTokyo"
+          title={
+            <>
+              Professor, Research Center for Advanced Science and Technology,{" "}
+              <br /> University of Tokyo
+            </>
+          }
           imageSrc="./Masahiko.jpg"
         />
         <SpeakerCard
-          name="Dr Anusha Withana"
-          title="PhD (Keio, Japan), MDes (Keio, Japan), BSc (Hons)"
-          imageSrc="./anusha.webp"
+          name="A. Prof. Anusha Withana"
+          title={
+            <>
+              Associate Professor, School of Computer Science, <br /> The
+              University of Sydney
+            </>
+          }
+          imageSrc="./anusha.jpg"
         />
       </div>
     </section>

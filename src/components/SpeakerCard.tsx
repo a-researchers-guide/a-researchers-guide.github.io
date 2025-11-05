@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import SolarMicrophone2Linear from "./icons/SolarMicrophone2Linear";
 
 type SpeakerCardProps = {
   name: string;
-  title: string;
+  title: ReactNode;
   imageSrc: string;
 };
 
@@ -14,7 +14,7 @@ const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc }) => {
         <div className="flex w-full overflow-hidden  border-4 border-primary rounded-full aspect-square mx-auto mb-6">
           <img
             src={imageSrc}
-            className="rounded-full object-cover object-bottom hover:scale-125 will-change-transform transition-transform duration-300 ease-in-out "
+            className="rounded-full object-cover object-bottom hover:scale-125 will-change-transform transition-transform duration-300 ease-in-out aspect-square"
             alt={name}
           />
         </div>
@@ -23,7 +23,7 @@ const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc }) => {
         </div>
       </div>
       <div>
-        <h3 className="heading-3 text-center md:text-3xl lg:text-[28px] mb-2">
+        <h3 className="heading-3 text-center md:text-3xl lg:text-[26px] mb-2 whitespace-nowrap">
           {name}
         </h3>
         <p className="text-center opacity-60 text-xs text-balance md:text-sm lg:text-base lg:text-wrap">
