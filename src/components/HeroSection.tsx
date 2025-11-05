@@ -1,6 +1,7 @@
-import { useEffect, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import { Button } from "./ui/button";
 import SplitText from "./SplitText";
+import { motion } from "framer-motion";
 
 declare global {
   interface Window {
@@ -12,6 +13,8 @@ declare global {
 type HeroSectionProps = object;
 
 const HeroSection: FC<HeroSectionProps> = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     if (window.VANTA)
       window.VANTA.CELLS({
@@ -31,7 +34,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
       <div className="absolute inset-0 -z-10 opacity-20 masked--vertical">
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
-      <section className="grid lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto lg:grid-cols-2">
+      <section className="flex flex-col md:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto">
         <div className="space-y-4 text-center lg:text-left">
           <h1 className="text-4xl lg:leading-[76px] lg:text-[85px] font-black uppercase">
             <SplitText
@@ -61,7 +64,20 @@ const HeroSection: FC<HeroSectionProps> = () => {
             Register Now
           </Button>
         </div>
-        <div></div>
+        <div className="min-h-[35vh]">
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={isLoaded ? { opacity: 1, filter: "blur(0px)" } : {}}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <img
+              src="https://picsum.photos/600/400"
+              alt="EMBS University of Moratuwa"
+              className="rounded-3xl"
+              onLoad={() => setIsLoaded(true)}
+            />
+          </motion.div>
+        </div>
       </section>
     </div>
   );
