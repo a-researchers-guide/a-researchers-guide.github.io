@@ -82,8 +82,13 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 box-border;
+    @apply border-border outline-ring/50 box-border scroll-m-16;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: linear-gradient(
         to right,

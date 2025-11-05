@@ -3,7 +3,7 @@ import SpeakerCard from "./SpeakerCard";
 
 const Speakers: FC = () => {
   return (
-    <section className="container mx-auto my-20 px-4">
+    <section className="container mx-auto my-20 px-4" id="speakers">
       <div className="space-y-4">
         <h2 className="heading-2 text-center font-serif">
           Our <span className="text-primary">Speakers</span>

@@ -6,7 +6,7 @@ import AddToCalendar from "./AddToCalendar";
 
 const Venue: FC = () => {
   return (
-    <section className="container mx-auto my-20">
+    <section className="container mx-auto my-20" id="venue">
       <div className="px-4">
         <div className="space-y-4">
           <h2 className="heading-2 text-center font-serif">

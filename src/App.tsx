@@ -1,16 +1,20 @@
 import CTA from "./components/CTA";
 import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
 import Speakers from "./components/Speakers";
 import Venue from "./components/Venue";
 
 function App() {
   return (
-    <main className="grid">
-      <HeroSection />
-      <Speakers />
-      <Venue />
-      <CTA />
-    </main>
+    <div className="">
+      <Navbar />
+      <main className="grid">
+        <HeroSection />
+        <Speakers />
+        <Venue />
+        <CTA />
+      </main>
+    </div>
   );
 }
 
