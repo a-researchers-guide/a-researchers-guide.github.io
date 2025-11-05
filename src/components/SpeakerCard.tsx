@@ -23,7 +23,7 @@ const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc }) => {
         </div>
       </div>
       <div>
-        <h3 className="heading-3 text-center md:text-3xl lg:text-[26px] mb-2 whitespace-nowrap">
+        <h3 className="heading-3 text-center md:text-3xl lg:text-[26px] mb-2 lg:whitespace-nowrap">
           {name}
         </h3>
         <p className="text-center opacity-60 text-xs text-balance md:text-sm lg:text-base lg:text-wrap">
