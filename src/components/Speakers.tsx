@@ -16,11 +16,27 @@ const Speakers: FC = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 place-items-center mt-10 lg:gap-32 w-fit mx-auto">
-        <SpeakerCard />
-        <SpeakerCard />
-        <SpeakerCard />
-        <SpeakerCard />
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 place-items-start mt-10 lg:gap-32 w-fit mx-auto">
+        <SpeakerCard
+          name="Prof. Hideki Koike"
+          title="Prof. of School of Computing, Tokyo Institute of Technology"
+          imageSrc="./Hideki-Koike.png"
+        />
+        <SpeakerCard
+          name="Prof. Alistair McEwan"
+          title="BE/BComm MEng(Res), Sydney, Australia. PhD, Oxford, UK. MIEEE"
+          imageSrc="./Alistair.jpeg"
+        />
+        <SpeakerCard
+          name="Prof. Masahiko Inami"
+          title="Professor, RCAST, UTokyo"
+          imageSrc="./Masahiko.jpg"
+        />
+        <SpeakerCard
+          name="Dr Anusha Withana"
+          title="PhD (Keio, Japan), MDes (Keio, Japan), BSc (Hons)"
+          imageSrc="./anusha.webp"
+        />
       </div>
     </section>
   );

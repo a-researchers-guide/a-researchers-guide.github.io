@@ -16,7 +16,7 @@ const AddToCalendar: FC = () => {
 
           <div className="w-full space-y-5">
             <h3 className="heading-3">Add Event to Your Calendar</h3>
-            <p className="max-w-prose text-sm">
+            <p className="max-w-prose text-sm md:text-base">
               Click the button below to Download the event details and add them
               to your calendar application.
               <br /> So you won't miss out!
