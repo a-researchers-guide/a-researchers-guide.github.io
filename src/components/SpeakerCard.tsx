@@ -18,7 +18,7 @@ const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc }) => {
             alt={name}
           />
         </div>
-        <div className="absolute bottom-0 right-0 text-xl md:text-4xl bg-primary text-primary-foreground p-4 md:p-8 rounded-full">
+        <div className="w-1/3 aspect-square h-auto absolute bottom-0 right-0 text-[clamp(30px,3vw,40px)] flex justify-center items-center bg-primary text-primary-foreground rounded-full">
           <SolarMicrophone2Linear />
         </div>
       </div>

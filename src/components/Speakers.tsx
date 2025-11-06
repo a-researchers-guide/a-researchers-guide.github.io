@@ -25,7 +25,7 @@ const Speakers: FC = () => {
               Technology
             </>
           }
-          imageSrc="./koike.jpg"
+          imageSrc="./koike.png"
         />
         <SpeakerCard
           name="Prof. Alistair McEwan"
