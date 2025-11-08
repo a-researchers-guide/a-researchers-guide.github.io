@@ -34,9 +34,10 @@ const HeroSection: FC<HeroSectionProps> = () => {
       <div className="absolute inset-0 -z-10 opacity-20 masked--vertical">
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
-      <section className="flex flex-col md:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto">
+      <section className="flex flex-col lg:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto">
         <div className="">
           <motion.div
+            className="mx-auto lg:mx-0 w-fit"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={isLoaded ? { opacity: 1, filter: "blur(0px)" } : {}}
             transition={{ duration: 0.5, ease: "easeOut" }}

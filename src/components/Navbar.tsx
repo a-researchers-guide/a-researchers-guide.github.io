@@ -13,9 +13,9 @@ const Navbar: FC = () => {
     <>
       <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center">
+            <div className="flex items-end gap-2">
               <div className="">
                 <img
                   src="./SV_Logo_White.png"
@@ -67,7 +67,7 @@ const Navbar: FC = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   align="start"
-                  className="w-screen -ml-4 mt-0 rounded-none border-0 bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60"
+                  className="w-screen -ml-4 mt-4 rounded-none border-0 bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60"
                   sideOffset={0}
                 >
                   <div className="container mx-auto px-4 py-4 space-y-2 text-white">
