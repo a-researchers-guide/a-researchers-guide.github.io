@@ -57,7 +57,6 @@ const HeroSection: FC<HeroSectionProps> = () => {
                 tag="div"
                 text="Your path to"
                 className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[65px]"
-                textAlign="left"
                 duration={1}
                 stagger={0.02}
               />
@@ -65,7 +64,6 @@ const HeroSection: FC<HeroSectionProps> = () => {
                 tag="div"
                 text="research begins here."
                 className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[65px]"
-                textAlign="left"
                 duration={1}
                 stagger={0.02}
               />

@@ -1,11 +1,11 @@
 import React from "react";
 import { motion, type Variants, type Easing } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export interface SplitTextProps {
   text: string;
   className?: string;
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
-  textAlign?: React.CSSProperties["textAlign"];
   stagger?: number;
   delay?: number;
   duration?: number;
@@ -19,7 +19,6 @@ const SplitText: React.FC<SplitTextProps> = ({
   text,
   className = "",
   tag = "p",
-  textAlign = "center",
   stagger = 0.02,
   delay = 0,
   duration = 0.4,
@@ -50,8 +49,8 @@ const SplitText: React.FC<SplitTextProps> = ({
 
   return (
     <Tag
-      className={`overflow-hidden whitespace-normal ${className}`}
-      style={{ textAlign, willChange: "transform, opacity" }}
+      className={cn("overflow-hidden whitespace-normal", className)}
+      style={{ willChange: "transform, opacity" }}
     >
       <motion.span
         variants={containerVariants}
