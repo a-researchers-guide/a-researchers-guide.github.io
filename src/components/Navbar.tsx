@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { REGISTRATION_LINK } from "@/consts/event";
 
 const Navbar: FC = () => {
   return (
@@ -53,8 +54,8 @@ const Navbar: FC = () => {
             </div>
 
             {/* Register Button */}
-            <Button size="default" className="hidden md:inline-flex">
-              Register
+            <Button size="default" asChild className="hidden md:inline-flex">
+              <a href={REGISTRATION_LINK}>Register</a>
             </Button>
 
             {/* Mobile Menu Dropdown */}

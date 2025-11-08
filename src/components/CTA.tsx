@@ -3,7 +3,7 @@ import { ChevronRightIcon, XIcon } from "lucide-react";
 import { useEffect, type FC } from "react";
 import Countdown, { type CountdownRendererFn } from "react-countdown";
 import { Button } from "./ui/button";
-import { EVENT_REGISTRATION_END } from "@/consts/event";
+import { EVENT_REGISTRATION_END, REGISTRATION_LINK } from "@/consts/event";
 
 const CTA: FC = () => {
   useEffect(() => {
@@ -50,6 +50,7 @@ const CTA: FC = () => {
             disabled={isRegClosed}
             size={"lg"}
             className="md:pl-12! pl-6! pr-2!"
+            asChild={!isRegClosed}
           >
             {isRegClosed ? (
               <>
@@ -57,10 +58,10 @@ const CTA: FC = () => {
                 <XIcon className="md:size-8  p-2 md:p-4 rounded-full" />
               </>
             ) : (
-              <>
+              <a href={REGISTRATION_LINK} className="contents">
                 <span className="mr-2 md:mr-4">Register Now</span>
                 <ChevronRightIcon className="size-8 md:size-16 bg-black text-primary p-2 md:p-4 rounded-full" />
-              </>
+              </a>
             )}
           </Button>
         </div>

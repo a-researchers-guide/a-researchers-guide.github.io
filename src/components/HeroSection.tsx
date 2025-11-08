@@ -2,6 +2,7 @@ import { useEffect, useState, type FC } from "react";
 import { Button } from "./ui/button";
 import SplitText from "./SplitText";
 import { motion } from "framer-motion";
+import { REGISTRATION_LINK } from "@/consts/event";
 
 declare global {
   interface Window {
@@ -77,8 +78,8 @@ const HeroSection: FC<HeroSectionProps> = () => {
               opportunities available, and how students can contribute to the
               future of technology.
             </p>
-            <Button size={"lg"} className="">
-              Register Now
+            <Button size={"lg"} className="" asChild>
+              <a href={REGISTRATION_LINK}>Register Now</a>
             </Button>
           </div>
         </div>
