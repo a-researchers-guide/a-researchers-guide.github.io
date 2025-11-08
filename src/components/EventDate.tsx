@@ -5,11 +5,6 @@ const EventDate: FC = () => {
   return (
     <section className="my-20 grid place-items-center">
       <div className="container mx-auto grid">
-        <div className="space-y-4">
-          <h2 className="heading-2 text-center">
-            <span className="text-primary">When?</span>
-          </h2>
-        </div>
         <div className="flex gap-10 lg:gap-16 my-20 w-fit mx-auto">
           <div className="relative">
             <div className="text-[200px] font-medium scale-y-150 leading-[200px] mb-5 whitespace-nowrap">

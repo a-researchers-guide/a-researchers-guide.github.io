@@ -9,16 +9,15 @@ const Speakers: FC = () => {
           Our <span className="text-primary">Speakers</span>
         </h2>
         <p className="text-center max-w-prose mx-auto opacity-60 text-balance">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          quisquam impedit aliquid minima iusto pariatur error repudiandae ea
-          nemo ipsum! Quidem quae a officia doloribus ex recusandae nemo facere
-          id?
+          Meet our speakers, the minds bringing humans and computers closer in
+          thought and creation.
         </p>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 place-items-start mt-10 lg:gap-32 w-fit mx-auto">
         <SpeakerCard
           name="Prof. Masahiko Inami"
+          link="https://www.rcast.u-tokyo.ac.jp/en/research/people/staff-inami_masahiko.html"
           title={
             <>
               Professor, Research Center for Advanced Science and Technology,{" "}
@@ -29,6 +28,7 @@ const Speakers: FC = () => {
         />
         <SpeakerCard
           name="Prof. Alistair McEwan"
+          link="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/alistair-mcewan.html"
           title={
             <>
               Associate Head of School of Biomedical Engineering, <br /> The
@@ -39,6 +39,7 @@ const Speakers: FC = () => {
         />
         <SpeakerCard
           name="Prof. Hideki Koike"
+          link="https://www.vogue.cs.titech.ac.jp/koike"
           title={
             <>
               Professor, School of Computing, <br /> Tokyo Institute of
@@ -49,6 +50,7 @@ const Speakers: FC = () => {
         />
         <SpeakerCard
           name="A. Prof. Anusha Withana"
+          link="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/anusha-withana.html"
           title={
             <>
               Associate Professor, School of Computer Science, <br /> The

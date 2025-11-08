@@ -16,7 +16,24 @@ const Navbar: FC = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <span className="text-xl font-bold">EMBS</span>
+              <div className="">
+                <img
+                  src="./SV_Logo_White.png"
+                  alt="Scholarverse"
+                  width={150}
+                  height={80}
+                  className="object-cover"
+                />
+              </div>
+              <div className="">
+                <img
+                  src="./EMBS_UoM_Color.png"
+                  alt="Scholarverse"
+                  width={80}
+                  height={30}
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             {/* Navigation Links */}

@@ -3,6 +3,7 @@ import Anchor from "./map/Anchor";
 import { MapProvider, useMap } from "./map/MapProvider";
 import UniMap from "./map/UniMap";
 import AddToCalendar from "./AddToCalendar";
+import ExpectedAttendence from "./ExpectedAttendence";
 
 const Venue: FC = () => {
   return (
@@ -25,7 +26,7 @@ const Venue: FC = () => {
             </h2>
             <div className="flex gap-10 my-10 lg:my-0 flex-col md:flex-row">
               <div className="relative">
-                <div className="text-8xl leading-[120px] md:text-[140px] md:leading-[200px] font-medium scale-y-150  mb-5 whitespace-nowrap">
+                <div className="text-8xl leading-[120px] md:text-[140px] md:leading-[180px] font-extrabold scale-y-125 mb-5 whitespace-nowrap">
                   13 DEC
                 </div>
                 <div className="absolute text-3xl md:text-5xl w-fit right-5 -bottom-4 mt-2 text-foreground/60">
@@ -50,7 +51,10 @@ const Venue: FC = () => {
             </div>
           </div>
         </div>
-        <AddToCalendar />
+        <div className="flex gap-10 flex-col lg:flex-row items-center lg:items-stretch mx-auto mt-20 ">
+          <ExpectedAttendence />
+          <AddToCalendar />
+        </div>
       </div>
     </section>
   );

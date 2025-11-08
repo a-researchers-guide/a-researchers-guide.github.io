@@ -35,34 +35,51 @@ const HeroSection: FC<HeroSectionProps> = () => {
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
       <section className="flex flex-col md:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto">
-        <div className="space-y-4 text-center lg:text-left">
-          <h1 className="text-4xl lg:leading-[76px] lg:text-[85px] font-black uppercase">
-            <SplitText
-              tag="div"
-              text="Lorem ipsum"
-              className="max-w-7xl w-fit mx-auto lg:mx-0  lg:h-[85px]"
-              textAlign="left"
-              duration={1}
-              stagger={0.02}
+        <div className="">
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={isLoaded ? { opacity: 1, filter: "blur(0px)" } : {}}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <img
+              src="./SV_Logo_White.png"
+              alt="Scholarverse"
+              width={300}
+              height={100}
+              className="object-contain mb-5"
             />
-            <SplitText
-              tag="div"
-              text="dolor sit amet."
-              className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[85px]"
-              textAlign="left"
-              duration={1}
-              stagger={0.02}
-            />
-          </h1>
-          <p className="max-w-prose mx-auto lg:mx-0 text-balance">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Blanditiis, cum. Reiciendis aliquid eos minima eum quo velit beatae
-            eaque eius.
-          </p>
-
-          <Button size={"lg"} className="mt-10">
-            Register Now
-          </Button>
+          </motion.div>
+          <div className="space-y-6 text-center lg:text-left">
+            <h1 className="text-4xl lg:leading-[62px] lg:text-[60px] font-black uppercase">
+              <SplitText
+                tag="div"
+                text="Your path to"
+                className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[65px]"
+                textAlign="left"
+                duration={1}
+                stagger={0.02}
+              />
+              <SplitText
+                tag="div"
+                text="research begins here."
+                className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[65px]"
+                textAlign="left"
+                duration={1}
+                stagger={0.02}
+              />
+            </h1>
+            <p className="max-w-3xl mx-auto lg:mx-0">
+              Scholarverse inspires undergraduates across Sri Lanka to pursue
+              advanced research and postgraduate studies by learning directly
+              from world-recognized researchers. We offer insights into advanced
+              research labs, how to begin an academic research journey, the
+              opportunities available, and how students can contribute to the
+              future of technology.
+            </p>
+            <Button size={"lg"} className="">
+              Register Now
+            </Button>
+          </div>
         </div>
         <div className="min-h-[35vh]">
           <motion.div
