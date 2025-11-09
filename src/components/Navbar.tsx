@@ -29,34 +29,35 @@ const Navbar: FC = () => {
               <div className="">
                 <img
                   src="./EMBS_UoM_Color.png"
-                  alt="Scholarverse"
+                  alt="EMBS Logo"
                   width={80}
                   height={30}
-                  className="object-cover"
+                  className="object-cover saturate-0 invert"
                 />
               </div>
             </div>
 
-            {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#speakers"
-                className="text-sm font-medium transition-colors hover:text-primary"
-              >
-                Speakers
-              </a>
-              <a
-                href="#venue"
-                className="text-sm font-medium transition-colors hover:text-primary"
-              >
-                Venue
-              </a>
+            <div className="flex gap-10">
+              {/* Navigation Links */}
+              <div className="hidden md:flex items-center space-x-8">
+                <a
+                  href="#speakers"
+                  className="text-sm font-medium transition-colors hover:text-primary"
+                >
+                  Speakers
+                </a>
+                <a
+                  href="#venue"
+                  className="text-sm font-medium transition-colors hover:text-primary"
+                >
+                  Venue
+                </a>
+              </div>
+              {/* Register Button */}
+              <Button size="default" asChild className="hidden md:inline-flex">
+                <a href={REGISTRATION_LINK}>Register</a>
+              </Button>
             </div>
-
-            {/* Register Button */}
-            <Button size="default" asChild className="hidden md:inline-flex">
-              <a href={REGISTRATION_LINK}>Register</a>
-            </Button>
 
             {/* Mobile Menu Dropdown */}
             <div className="md:hidden">

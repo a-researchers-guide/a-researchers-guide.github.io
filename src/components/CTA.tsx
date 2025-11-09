@@ -24,7 +24,7 @@ const CTA: FC = () => {
   const isRegClosed = new Date() > EVENT_REGISTRATION_END;
   return (
     <div
-      className="relative lg:min-h-[80vh] grid place-items-center px-4"
+      className="relative lg:min-h-[60vh] grid place-items-center px-4"
       id="register"
     >
       <div className="absolute inset-0 -z-10 opacity-12 masked--vertical">

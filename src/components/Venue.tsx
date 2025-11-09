@@ -2,8 +2,6 @@ import { type FC } from "react";
 import Anchor from "./map/Anchor";
 import { MapProvider, useMap } from "./map/MapProvider";
 import UniMap from "./map/UniMap";
-import AddToCalendar from "./AddToCalendar";
-import ExpectedAttendence from "./ExpectedAttendence";
 
 const Venue: FC = () => {
   return (
@@ -47,10 +45,6 @@ const Venue: FC = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex gap-10 flex-col lg:flex-row items-center lg:items-stretch mx-auto mt-20 ">
-          <ExpectedAttendence />
-          <AddToCalendar />
         </div>
       </div>
     </section>
