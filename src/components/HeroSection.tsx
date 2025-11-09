@@ -35,10 +35,10 @@ const HeroSection: FC<HeroSectionProps> = () => {
       <div className="absolute inset-0 -z-10 opacity-20 masked--vertical">
         <div className="absolute w-[200vw] h-[200vh]" id="heroSection"></div>
       </div>
-      <section className="flex flex-col lg:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-4 container mx-auto">
+      <section className="flex flex-col lg:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-8 container mx-auto">
         <div className="">
           <motion.div
-            className="mx-auto lg:mx-0 w-fit"
+            className="mx-auto mb-10 lg:mx-0 w-fit"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={isLoaded ? { opacity: 1, filter: "blur(0px)" } : {}}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -46,24 +46,24 @@ const HeroSection: FC<HeroSectionProps> = () => {
             <img
               src="./SV_Logo_White.png"
               alt="Scholarverse"
-              width={300}
+              width={450}
               height={100}
-              className="object-contain mb-5"
+              className="object-contain mb-5 max-w-xs md:max-w-none"
             />
           </motion.div>
-          <div className="space-y-6 text-center lg:text-left">
-            <h1 className="text-4xl lg:leading-[62px] lg:text-[60px] font-black uppercase">
+          <div className="space-y-2 text-center lg:text-left">
+            <h1 className="text-3xl lg:leading-10 lg:text-[40px] font-black uppercase">
               <SplitText
                 tag="div"
                 text="Your path to"
-                className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[65px]"
+                className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-12"
                 duration={1}
                 stagger={0.02}
               />
               <SplitText
                 tag="div"
                 text="research begins here."
-                className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-[65px]"
+                className="max-w-7xl w-fit mx-auto lg:mx-0 lg:h-12"
                 duration={1}
                 stagger={0.02}
               />
@@ -76,7 +76,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
               opportunities available, and how students can contribute to the
               future of technology.
             </p>
-            <Button size={"lg"} className="" asChild>
+            <Button size={"lg"} className="mt-10" asChild>
               <a href={REGISTRATION_LINK}>Register Now</a>
             </Button>
           </div>
