@@ -22,3 +22,17 @@
 .uni-map .civilAuditorium {
   fill: var(--primary);
 }
+
+.uni-map path#civilRoad {
+  stroke: #beffe3;
+  stroke-dasharray: 10px 10px;
+  stroke-dashoffset: 10px;
+  stroke-width: 3px;
+  animation: dashMove 0.8s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -10px;
+  }
+}
