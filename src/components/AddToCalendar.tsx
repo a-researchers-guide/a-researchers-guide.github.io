@@ -9,7 +9,7 @@ const AddToCalendar: FC = () => {
   return (
     <Card className="max-w-5xl w-fit md:w-full border-none py-10 bg-card/40">
       <CardContent>
-        <div className="flex flex-col md:flex-row text-center md:text-left h-fit items-center gap-5 lg:gap-10">
+        <div className="flex flex-col md:flex-row text-center md:text-left h-fit items-center gap-5 lg:gap-8">
           <div className="size-full max-w-32 md:max-w-64">
             <CalendarDaysIcon className="size-full max-w-48 mx-auto" />
           </div>

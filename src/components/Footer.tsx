@@ -1,10 +1,30 @@
 import type { FC } from "react";
+import Partners from "./Partners";
 
 const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-600 bg-background">
+    <footer className="border-t border-neutral-600 bg-background mt-20">
+      <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0 container mx-auto px-4 py-5">
+        <Partners />
+        <div className="text-muted-foreground">
+          <div className="font-medium text-lg">Contact</div>
+          <div className="">
+            <span>Person 1 — </span>
+            <a
+              href="tel:+94123456789"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              +94 123 456 789
+            </a>
+          </div>
+          <div className="">
+            <span>Person 1 — </span>
+            <span>+94 123 456 789</span>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           {/* Copyright */}
