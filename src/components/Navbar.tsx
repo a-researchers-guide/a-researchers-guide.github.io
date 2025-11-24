@@ -19,7 +19,7 @@ const Navbar: FC = () => {
             <div className="flex items-end gap-2">
               <div className="">
                 <img
-                  src="./SV_Logo_White.png"
+                  src="./a_researchers_guide.png"
                   alt="Scholarverse"
                   width={150}
                   height={80}

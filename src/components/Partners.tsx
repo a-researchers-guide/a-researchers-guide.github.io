@@ -4,7 +4,7 @@ const Partners: FC = () => {
   return (
     <div className="relative grid" id="register">
       <div className="max-w-lg w-full mx-0 flex items-center justify-start gap-5 ">
-        <div className="">
+        {/* <div className="">
           <img
             src="./UOM.png"
             alt="Scholarverse"
@@ -12,7 +12,7 @@ const Partners: FC = () => {
             height={100}
             className="object-cover"
           />
-        </div>
+        </div> */}
         <div className="saturate-0 invert">
           <img
             src="./EMBS_UoM_Color.png"

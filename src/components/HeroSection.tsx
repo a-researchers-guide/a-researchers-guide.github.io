@@ -44,11 +44,11 @@ const HeroSection: FC<HeroSectionProps> = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <img
-              src="./SV_Logo_White.png"
+              src="./a_researchers_guide.png"
               alt="Scholarverse"
               width={400}
               height={100}
-              className="object-contain mb-5 max-w-xs md:max-w-xl md:min-h-48 w-full"
+              className="object-contain mb-5 max-w-xs md:max-w-xl md:min-h-32 w-full"
             />
           </motion.div>
           <div className="space-y-5 text-center lg:text-left">

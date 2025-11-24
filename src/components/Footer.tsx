@@ -10,19 +10,34 @@ const Footer: FC = () => {
         <Partners />
         <div className="text-muted-foreground">
           <div className="font-medium text-lg">Contact</div>
-          <div className="">
-            <span>Person 1 — </span>
-            <a
-              href="tel:+94123456789"
-              className="text-muted-foreground transition-colors hover:text-primary"
-            >
-              +94 123 456 789
-            </a>
-          </div>
-          <div className="">
-            <span>Person 1 — </span>
-            <span>+94 123 456 789</span>
-          </div>
+          <table className="text-sm">
+            <tbody>
+              <tr>
+                <td className="text-left pr-2">Devnith</td>
+                <td className="">—</td>
+                <td className="text-left pl-2">
+                  <a
+                    href="tel:+94713116761"
+                    className="text-muted-foreground transition-colors hover:text-primary font-mono"
+                  >
+                    +94 71 311 6761
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="text-left pr-2">Sajitha</td>
+                <td className="">—</td>
+                <td className="text-left pl-2">
+                  <a
+                    href="tel:+94769867887"
+                    className="text-muted-foreground transition-colors hover:text-primary font-mono"
+                  >
+                    +94 76 986 7887
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8">
