@@ -1,8 +1,8 @@
-import { useEffect, useState, type FC } from "react";
-import { Button } from "./ui/button";
-import SplitText from "./SplitText";
-import { motion } from "framer-motion";
 import { REGISTRATION_LINK } from "@/consts/event";
+import { useEffect, type FC } from "react";
+import Slideshow from "./Slideshow";
+import SplitText from "./SplitText";
+import { Button } from "./ui/button";
 
 declare global {
   interface Window {
@@ -14,8 +14,6 @@ declare global {
 type HeroSectionProps = object;
 
 const HeroSection: FC<HeroSectionProps> = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     if (window.VANTA)
       window.VANTA.CELLS({
@@ -30,6 +28,23 @@ const HeroSection: FC<HeroSectionProps> = () => {
         speed: 0.5,
       });
   }, []);
+
+  const images = [
+    "./gallery/img1.jpeg",
+    "./gallery/img2.jpeg",
+    "./gallery/img3.jpeg",
+    "./gallery/img4.jpeg",
+    "./gallery/img5.jpeg",
+    "./gallery/img6.jpeg",
+    "./gallery/img7.jpeg",
+    "./gallery/img8.jpeg",
+    "./gallery/img9.jpeg",
+    "./gallery/img10.jpeg",
+    "./gallery/img11.jpeg",
+    "./gallery/img12.jpeg",
+    "./gallery/img13.jpeg",
+    "./gallery/img14.jpeg",
+  ];
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 opacity-20 masked--vertical">
@@ -37,12 +52,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
       </div>
       <section className="flex flex-col lg:flex-row justify-between lg:min-h-[50vh] items-center gap-10 my-10 md:my-20 px-8 container mx-auto">
         <div className="">
-          <motion.div
-            className="mx-auto mb-10 lg:mx-0 w-fit "
-            initial={{ opacity: 0, filter: "blur(10px)" }}
-            animate={isLoaded ? { opacity: 1, filter: "blur(0px)" } : {}}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
+          <div className="mx-auto mb-10 lg:mx-0 w-fit">
             <img
               src="./a_researchers_guide.png"
               alt="Scholarverse"
@@ -50,7 +60,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
               height={100}
               className="object-contain mb-5 max-w-xs md:max-w-xl md:min-h-32 w-full"
             />
-          </motion.div>
+          </div>
           <div className="space-y-5 text-center lg:text-left">
             <h1 className="text-3xl lg:text-4xl font-black uppercase">
               <SplitText
@@ -74,20 +84,8 @@ const HeroSection: FC<HeroSectionProps> = () => {
             </Button>
           </div>
         </div>
-        <div className="min-h-[35vh]">
-          <motion.div
-            initial={{ opacity: 0, filter: "blur(10px)" }}
-            animate={isLoaded ? { opacity: 1, filter: "blur(0px)" } : {}}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <img
-              src="https://picsum.photos/600/400"
-              alt="EMBS University of Moratuwa"
-              className="rounded-3xl"
-              onLoad={() => setIsLoaded(true)}
-            />
-          </motion.div>
-        </div>
+
+        <Slideshow images={images} alt="Gallery slideshow" interval={4000} />
       </section>
     </div>
   );
