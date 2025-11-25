@@ -54,11 +54,11 @@ const HeroSection: FC<HeroSectionProps> = () => {
         <div className="">
           <div className="mx-auto mb-10 lg:mx-0 w-fit">
             <img
-              src="./a_researchers_guide.png"
+              src="./title_transparent.png"
               alt="Scholarverse"
-              width={400}
+              width={600}
               height={100}
-              className="object-contain mb-5 max-w-xs md:max-w-xl md:min-h-32 w-full"
+              className="object-contain mb-5 max-w-xs md:max-w-2xl md:min-h-36 w-full"
             />
           </div>
           <div className="space-y-5 text-center lg:text-left">
