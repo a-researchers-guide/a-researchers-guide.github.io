@@ -1,6 +1,6 @@
 export function downloadICS(eventStart: Date, eventEnd: Date) {
   const ics = `BEGIN:VCALENDAR
-PRODID:-//ScholarVerse//EN
+PRODID:-//A Researchers Guide//EN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:REQUEST
@@ -15,19 +15,19 @@ LOCATION:Civil Auditorium, University of Moratuwa
 DESCRIPTION:Join us at the Civil Auditorium, University of Moratuwa.
  Get directions: https://maps.google.com/?q=Civil+Auditorium,+University+of+Moratuwa
 STATUS:CONFIRMED
-SUMMARY:Scholarverse Event
+SUMMARY:A Researcher's Guide Event
 TRANSP:OPAQUE
 
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Reminder: Scholarverse Event is tomorrow!
+DESCRIPTION:Reminder: A Researcher's Guide Event is tomorrow!
 END:VALARM
 
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:Reminder: Scholarverse Event starts in 30 minutes!
+DESCRIPTION:Reminder: A Researcher's Guide Event starts in 30 minutes!
 END:VALARM
 
 END:VEVENT
