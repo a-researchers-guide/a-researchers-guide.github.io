@@ -95,7 +95,7 @@
         color-mix(in oklab, var(--background) 70%, transparent),
         color-mix(in oklab, var(--background) 70%, transparent)
       ),
-      url("http://localhost:5173/sb-moratuwa-embs/grain.png");
+      url("/grain.png");
     background-repeat: no-repeat, repeat;
     background-size: cover, 400px 400px;
     color: var(--foreground);
