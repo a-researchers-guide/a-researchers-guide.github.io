@@ -19,11 +19,11 @@
   fill: color-mix(in oklab, var(--primary) 20%, transparent);
 }
 
-.uni-map .civilAuditorium {
+.uni-map .placeBuilding {
   fill: var(--primary);
 }
 
-.uni-map path#civilRoad {
+.uni-map path#placeRoad {
   stroke: #beffe3;
   stroke-dasharray: 10px 10px;
   stroke-dashoffset: 10px;

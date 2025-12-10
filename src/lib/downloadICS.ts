@@ -11,9 +11,9 @@ DTSTAMP:${formatICSDate(new Date())}
 UID:${crypto.randomUUID()}
 CREATED:${formatICSDate(new Date())}
 LAST-MODIFIED:${formatICSDate(new Date())}
-LOCATION:Civil Auditorium, University of Moratuwa
-DESCRIPTION:Join us at the Civil Auditorium, University of Moratuwa.
- Get directions: https://maps.google.com/?q=Civil+Auditorium,+University+of+Moratuwa
+LOCATION:Electrical Engineering Seminar Room, University of Moratuwa
+DESCRIPTION:Join us at the Electrical Engineering Seminar Room, University of Moratuwa.
+ Get directions: https://maps.google.com/?q=Electrical+Engineering+Seminar+Room,+University+of+Moratuwa
 STATUS:CONFIRMED
 SUMMARY:A Researcher's Guide Event
 TRANSP:OPAQUE

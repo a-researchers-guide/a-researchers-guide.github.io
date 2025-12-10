@@ -9,7 +9,10 @@ const Venue: FC = () => {
       <div className="px-4">
         <div className="space-y-4">
           <h2 className="heading-2 text-center font-serif">
-            Meet us at <span className="text-primary">Civil Auditorium</span>
+            Meet us at <br />
+            <span className="text-primary">
+              Electrical Engineering Seminar Room
+            </span>
           </h2>
         </div>
         <div className="flex flex-col lg:flex-row items-center min-h-96">
@@ -39,7 +42,7 @@ const Venue: FC = () => {
                 <div className="flex gap-3 w-full justify-between items-center text-foreground/60">
                   TO{" "}
                   <div className="bg-primary text-primary-foreground px-5 py-3 rounded-full">
-                    02:00 PM
+                    01:00 PM
                   </div>
                 </div>
               </div>
@@ -60,12 +63,7 @@ const MapContent = () => {
       ref={containerRef}
     >
       <UniMap svgRef={svgRef} className="h-auto" />
-      <Anchor
-        x={600}
-        y={340}
-        name="Civil Auditorium"
-        className="right-full left-auto md:right-auto md:left-full"
-      />
+      <Anchor x={345} y={430} name="Electrical Seminar Room" className="" />
       <Anchor x={405} y={630} name="University Entrance" />
     </div>
   );
