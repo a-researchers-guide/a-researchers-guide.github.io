@@ -14,8 +14,36 @@ const Speakers: FC = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 place-items-start mt-10 lg:gap-32 w-fit mx-auto">
+      <div className="grid grid-cols-2 gap-10 place-items-start mt-10 lg:gap-32 w-fit mx-auto">
         <SpeakerCard
+          name="Dr. M. C. M. Iqbal"
+          link="https://www.rcast.u-tokyo.ac.jp/en/research/people/staff-inami_masahiko.html"
+          title={
+            <>
+              B.Sc Agric. (UOP), Dipl. Ing-Agr (ETH Zurich), 
+PhD (Goettingen) Scientist Retd.
+National Institute of Fundamental Studies,
+Hantana, Kandy.
+Sri Lanka.
+            </>
+          }
+          imageSrc="./C_M_Iqbal.jpeg"
+        />
+        <SpeakerCard
+          name="Dr. Fadil Iqbal"
+          link="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/alistair-mcewan.html"
+          title={
+            <>
+              B.Sc Physics (UOC), PhD (IUI)
+Postdoctoral Fellow at Laboratory of Receptor Biology and Gene Expression
+National Cancer Institute
+National Institutes of Health
+Maryland, USA
+            </>
+          }
+          imageSrc="./Fadil_Iqbal.jpeg"
+        />
+        {/* <SpeakerCard
           name="Prof. Masahiko Inami"
           link="https://www.rcast.u-tokyo.ac.jp/en/research/people/staff-inami_masahiko.html"
           title={
@@ -58,7 +86,7 @@ const Speakers: FC = () => {
             </>
           }
           imageSrc="./anusha.jpg"
-        />
+        /> */}
       </div>
     </section>
   );

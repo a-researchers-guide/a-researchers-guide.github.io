@@ -10,7 +10,7 @@ type SpeakerCardProps = {
 
 const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc, link }) => {
   return (
-    <div className="max-w-sm w-full">
+    <div className="max-w-xs w-full">
       <div className="relative w-full">
         <div className="flex w-full overflow-hidden  border-4 border-primary rounded-full aspect-square mx-auto mb-6">
           <a

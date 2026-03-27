@@ -9,11 +9,16 @@ const Venue: FC = () => {
       <div className="px-4">
         <div className="space-y-4">
           <h2 className="heading-2 text-center font-serif">
-            Meet us at <br />
-            <span className="text-primary">
-              Electrical Engineering Seminar Room
+            Meet us at  
+            <span className="text-primary ml-3">
+              ENTC 1
             </span>
           </h2>
+            <div className="heading-3 text-muted-foreground text-center">
+                Department of Electronics and Telecommunication Engineering
+                <br />
+                 University of Moratuwa
+            </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center min-h-96">
           <div className="w-full max-w-xl ">
@@ -25,10 +30,10 @@ const Venue: FC = () => {
             <div className="flex gap-10 my-10 lg:my-0 flex-col md:flex-row">
               <div className="relative">
                 <div className="text-8xl leading-[120px] md:text-[140px] md:leading-[180px] font-extrabold scale-y-125 mb-5 whitespace-nowrap">
-                  13 DEC
+                  09 APR
                 </div>
                 <div className="absolute text-3xl md:text-5xl w-fit right-5 -bottom-4 mt-2 text-foreground/60">
-                  2025
+                  2026
                 </div>
               </div>
               <div className="text-2xl md:text-3xl whitespace-nowrap flex flex-col justify-between gap-10 md:gap-5 w-full max-w-xs relative">
@@ -36,13 +41,13 @@ const Venue: FC = () => {
                 <div className="flex gap-3 w-full justify-between items-center text-foreground/60">
                   FROM{" "}
                   <div className="bg-primary text-primary-foreground px-5 py-3 rounded-full">
-                    10:00 AM
+                    17:00 PM
                   </div>
                 </div>
                 <div className="flex gap-3 w-full justify-between items-center text-foreground/60">
                   TO{" "}
                   <div className="bg-primary text-primary-foreground px-5 py-3 rounded-full">
-                    01:00 PM
+                    20:00 PM
                   </div>
                 </div>
               </div>
@@ -63,7 +68,7 @@ const MapContent = () => {
       ref={containerRef}
     >
       <UniMap svgRef={svgRef} className="h-auto" />
-      <Anchor x={345} y={430} name="Electrical Seminar Room" className="" />
+      <Anchor x={345} y={430} name="ENTC 1" className="" />
       <Anchor x={405} y={630} name="University Entrance" />
     </div>
   );

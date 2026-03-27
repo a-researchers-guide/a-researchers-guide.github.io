@@ -11,9 +11,8 @@ DTSTAMP:${formatICSDate(new Date())}
 UID:${crypto.randomUUID()}
 CREATED:${formatICSDate(new Date())}
 LAST-MODIFIED:${formatICSDate(new Date())}
-LOCATION:Electrical Engineering Seminar Room, University of Moratuwa
-DESCRIPTION:Join us at the Electrical Engineering Seminar Room, University of Moratuwa.
- Get directions: https://maps.google.com/?q=Electrical+Engineering+Seminar+Room,+University+of+Moratuwa
+LOCATION:ENTC 1, Department of Electronics and Telecommunication Engineering, University of Moratuwa
+DESCRIPTION:Join us at the ENTC 1, Department of Electronics and Telecommunication Engineering, University of Moratuwa.
 STATUS:CONFIRMED
 SUMMARY:A Researcher's Guide Event
 TRANSP:OPAQUE

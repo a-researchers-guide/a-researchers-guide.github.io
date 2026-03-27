@@ -7,7 +7,7 @@ const ExpectedAttendence: FC = () => {
       <CardContent className="grid place-content-center place-items-center h-fit my-auto">
         <div className="text-8xl md:text-[100px] font-extrabold mb-5 whitespace-nowrap ">
           <span className="opacity-0 select-none pointer-events-none">+</span>
-          <span className="text-primary">100</span>+
+          <span className="text-primary">50</span>+
         </div>
         <p className="md:text-xl">Delegates</p>
       </CardContent>
