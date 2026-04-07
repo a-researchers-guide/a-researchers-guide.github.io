@@ -22,6 +22,7 @@ function EventTwoPage() {
   return (
     <>
       <HeroSection
+        logoSrc="/a_researchers_guide.png"
         images={event2Images}
         registrationLink={REGISTRATION_LINK}
          description='Scholarverse inspires undergraduates across Sri Lanka to pursue

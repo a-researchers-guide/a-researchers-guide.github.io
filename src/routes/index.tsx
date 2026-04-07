@@ -28,6 +28,7 @@ function App() {
   return (
     <>
       <HeroSection
+        logoSrc="/a_researchers_guide.png"
         images={[
           "/gallery/img1.jpeg",
           "/gallery/img2.jpeg",
