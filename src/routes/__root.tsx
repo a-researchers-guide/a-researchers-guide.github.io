@@ -1,4 +1,6 @@
-import { Outlet, createRootRoute } from '@tanstack/react-router'
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -6,6 +8,12 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <Outlet />
+    <div className="">
+      <Navbar />
+      <main className="grid">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   )
 }

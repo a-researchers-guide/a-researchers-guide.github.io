@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { REGISTRATION_LINK } from "@/consts/event";
+import { Link } from "@tanstack/react-router";
 
 const Navbar: FC = () => {
   return (
@@ -16,26 +17,28 @@ const Navbar: FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <div className="flex items-end gap-2">
-              <div className="">
-                <img
-                  src="./a_researchers_guide.png"
-                  alt="Scholarverse"
-                  width={150}
-                  height={80}
-                  className="object-cover"
-                />
-              </div>
-              <div className="">
-                <img
-                  src="./EMBS_UoM_Color.png"
-                  alt="EMBS Logo"
-                  width={80}
-                  height={30}
-                  className="object-cover saturate-0 invert"
-                />
-              </div>
-            </div>
+            <Link to="/">
+                <div className="flex items-end gap-2">
+                  <div className="">
+                    <img
+                      src="./a_researchers_guide.png"
+                      alt="Scholarverse"
+                      width={150}
+                      height={80}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="">
+                    <img
+                      src="./EMBS_UoM_Color.png"
+                      alt="EMBS Logo"
+                      width={80}
+                      height={30}
+                      className="object-cover saturate-0 invert"
+                    />
+                  </div>
+                </div>
+            </Link>
 
             <div className="flex gap-10">
               {/* Navigation Links */}
