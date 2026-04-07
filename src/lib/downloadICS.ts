@@ -1,32 +1,49 @@
-export function downloadICS(eventStart: Date, eventEnd: Date) {
+export interface ICSOptions {
+  title: string;
+  start: Date;
+  end: Date;
+  description: string;
+  location: string;
+  url?: string;
+}
+
+export function downloadICS({
+  title,
+  start,
+  end,
+  description,
+  location,
+  url,
+}: ICSOptions) {
+  const urlString = url ? `\nURL:${url}` : "";
   const ics = `BEGIN:VCALENDAR
-PRODID:-//A Researchers Guide//EN
+PRODID:-//${title}//EN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:REQUEST
 BEGIN:VEVENT
-DTSTART:${formatICSDate(eventStart)}
-DTEND:${formatICSDate(eventEnd)}
+DTSTART:${formatICSDate(start)}
+DTEND:${formatICSDate(end)}
 DTSTAMP:${formatICSDate(new Date())}
 UID:${crypto.randomUUID()}
 CREATED:${formatICSDate(new Date())}
 LAST-MODIFIED:${formatICSDate(new Date())}
-LOCATION:ENTC 1, Department of Electronics and Telecommunication Engineering, University of Moratuwa
-DESCRIPTION:Join us at the ENTC 1, Department of Electronics and Telecommunication Engineering, University of Moratuwa.
+LOCATION:${location}
+DESCRIPTION:${description.replace(/\n/g, "\\n")}${urlString}
 STATUS:CONFIRMED
-SUMMARY:A Researcher's Guide Event
+SUMMARY:${title}
 TRANSP:OPAQUE
 
 BEGIN:VALARM
 TRIGGER:-P1D
 ACTION:DISPLAY
-DESCRIPTION:Reminder: A Researcher's Guide Event is tomorrow!
+DESCRIPTION:Reminder: ${title} is tomorrow!
 END:VALARM
 
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:Reminder: A Researcher's Guide Event starts in 30 minutes!
+DESCRIPTION:Reminder: ${title} starts in 30 minutes!
 END:VALARM
 
 END:VEVENT
@@ -34,12 +51,12 @@ END:VCALENDAR
 `;
 
   const blob = new Blob([ics], { type: "text/calendar" });
-  const url = URL.createObjectURL(blob);
+  const objectUrl = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = url;
+  a.href = objectUrl;
   a.download = "event.ics";
   a.click();
-  URL.revokeObjectURL(url);
+  URL.revokeObjectURL(objectUrl);
 }
 
 function formatICSDate(date: Date) {

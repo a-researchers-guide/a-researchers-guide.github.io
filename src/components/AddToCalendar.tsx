@@ -1,11 +1,22 @@
-import { EVENT_END, EVENT_START } from "@/consts/event";
 import { downloadICS } from "@/lib/downloadICS";
 import { CalendarDaysIcon, PlusIcon } from "lucide-react";
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
-const AddToCalendar: FC = () => {
+type AddToCalendarProps = {
+  title?: ReactNode;
+  description?: ReactNode;
+  eventStart: Date;
+  eventEnd: Date;
+};
+
+const AddToCalendar: FC<AddToCalendarProps> = ({ 
+  title = "Add Event to Your Calendar", 
+  description = <>Click the button below to Download the event details and add them to your calendar application.<br /> So you won't miss out!</>, 
+  eventStart, 
+  eventEnd 
+}) => {
   return (
     <Card className="max-w-5xl w-fit md:w-full border-none py-10 bg-card/40">
       <CardContent>
@@ -15,14 +26,18 @@ const AddToCalendar: FC = () => {
           </div>
 
           <div className="w-full space-y-5">
-            <h3 className="heading-3">Add Event to Your Calendar</h3>
+            <h3 className="heading-3">{title}</h3>
             <p className="max-w-prose text-sm md:text-base text-balance md:text-wrap">
-              Click the button below to Download the event details and add them
-              to your calendar application.
-              <br /> So you won't miss out!
+              {description}
             </p>
 
-            <Button onClick={() => downloadICS(EVENT_START, EVENT_END)}>
+            <Button onClick={() => downloadICS({
+              title: typeof title === 'string' ? title : "Event",
+              start: eventStart, 
+              end: eventEnd,
+              description: "Scholarverse Event",
+              location: "TBA"
+            })}>
               <PlusIcon /> Add to Calendar
             </Button>
           </div>

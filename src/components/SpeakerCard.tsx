@@ -6,13 +6,20 @@ type SpeakerCardProps = {
   title: ReactNode;
   imageSrc: string;
   link: string;
+  icon?: ReactNode;
 };
 
-const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc, link }) => {
+const SpeakerCard: FC<SpeakerCardProps> = ({ 
+  name, 
+  title, 
+  imageSrc, 
+  link,
+  icon = <SolarMicrophone2Linear />
+}) => {
   return (
     <div className="max-w-xs w-full">
       <div className="relative w-full">
-        <div className="flex w-full overflow-hidden  border-4 border-primary rounded-full aspect-square mx-auto mb-6">
+        <div className="flex w-full overflow-hidden border-4 border-primary rounded-full aspect-square mx-auto mb-6">
           <a
             href={link}
             target="_blank"
@@ -27,7 +34,7 @@ const SpeakerCard: FC<SpeakerCardProps> = ({ name, title, imageSrc, link }) => {
           </a>
         </div>
         <div className="w-1/3 aspect-square h-auto absolute bottom-0 right-0 text-[clamp(30px,3vw,40px)] flex justify-center items-center bg-primary text-primary-foreground rounded-full">
-          <SolarMicrophone2Linear />
+          {icon}
         </div>
       </div>
       <div>

@@ -28,7 +28,7 @@ const events = [
 function App() {
   return (
     <>
-      <HeroSection />
+      <HeroSection images={["/gallery/img1.jpeg", "/gallery/img2.jpeg", "/gallery/img3.jpeg"]} />
       <section className="container mx-auto my-20" id="events">
         <div className="px-4 space-y-10">
           <div className="space-y-3 text-center">

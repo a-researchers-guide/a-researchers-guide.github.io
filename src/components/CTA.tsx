@@ -1,11 +1,20 @@
 import NumberFlow from "@number-flow/react";
 import { ChevronRightIcon, XIcon } from "lucide-react";
-import { useEffect, type FC } from "react";
+import { useEffect, type FC, type ReactNode } from "react";
 import Countdown, { type CountdownRendererFn } from "react-countdown";
 import { Button } from "./ui/button";
-import { EVENT_REGISTRATION_END, REGISTRATION_LINK } from "@/consts/event";
 
-const CTA: FC = () => {
+type CTAProps = {
+  title?: ReactNode;
+  registrationEndDate: Date;
+  registrationLink: string;
+};
+
+const CTA: FC<CTAProps> = ({ 
+  title = <>Register <span className="text-primary">Now</span></>, 
+  registrationEndDate, 
+  registrationLink 
+}) => {
   useEffect(() => {
     if (window.VANTA)
       window.VANTA.CELLS({
@@ -21,7 +30,7 @@ const CTA: FC = () => {
       });
   }, []);
 
-  const isRegClosed = new Date() > EVENT_REGISTRATION_END;
+  const isRegClosed = new Date() > registrationEndDate;
   return (
     <div
       className="relative lg:min-h-[60vh] grid place-items-center px-4"
@@ -33,7 +42,7 @@ const CTA: FC = () => {
       <section className="container mx-auto my-20">
         <div className="space-y-4">
           <h2 className="heading-2 text-center font-serif">
-            Register <span className="text-primary">Now</span>
+            {title}
           </h2>
         </div>
         <div className="relative mx-auto w-fit md:my-20 my-10">
@@ -42,7 +51,7 @@ const CTA: FC = () => {
               Time <span className="text-primary">Remaining</span>
             </div>
           )}
-          <Countdown date={EVENT_REGISTRATION_END} renderer={renderer} />
+          <Countdown date={registrationEndDate} renderer={renderer} />
         </div>
 
         <div className="mx-auto block w-fit">
@@ -58,7 +67,7 @@ const CTA: FC = () => {
                 <XIcon className="md:size-8  p-2 md:p-4 rounded-full" />
               </>
             ) : (
-              <a href={REGISTRATION_LINK} className="contents">
+              <a href={registrationLink} className="contents">
                 <span className="mr-2 md:mr-4">Register Now</span>
                 <ChevronRightIcon className="size-8 md:size-16 bg-black text-primary p-2 md:p-4 rounded-full" />
               </a>
