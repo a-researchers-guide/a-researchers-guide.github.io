@@ -24,6 +24,12 @@ function EventOnePage() {
       <HeroSection
         images={event1Images}
         registrationLink={REGISTRATION_LINK}
+        description='Scholarverse inspires undergraduates across Sri Lanka to pursue
+              advanced research and postgraduate studies by learning directly
+              from world-recognized researchers. We offer insights into advanced
+              research labs, how to begin an academic research journey, the
+              opportunities available, and how students can contribute to the
+              future of technology.'
       />
       <Speakers
       className="lg:grid-cols-4"

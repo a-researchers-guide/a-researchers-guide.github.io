@@ -6,7 +6,6 @@ export const Route = createFileRoute("/")({
 });
 
 const events = [
-
   {
     id: "event-2",
     title: "A Researcher's Guide",
@@ -15,7 +14,7 @@ const events = [
     location: "Online via Zoom",
     link: "/event-2",
   },
-    {
+  {
     id: "event-1",
     title: "Human computer interactions and Path to higher studies",
     dayMonth: "13 DEC",
@@ -28,7 +27,19 @@ const events = [
 function App() {
   return (
     <>
-      <HeroSection images={["/gallery/img1.jpeg", "/gallery/img2.jpeg", "/gallery/img3.jpeg"]} />
+      <HeroSection
+        images={[
+          "/gallery/img1.jpeg",
+          "/gallery/img2.jpeg",
+          "/gallery/img3.jpeg",
+        ]}
+        description="Scholarverse inspires undergraduates across Sri Lanka to pursue
+              advanced research and postgraduate studies by learning directly
+              from world-recognized researchers. We offer insights into advanced
+              research labs, how to begin an academic research journey, the
+              opportunities available, and how students can contribute to the
+              future of technology."
+      />
       <section className="container mx-auto my-20" id="events">
         <div className="px-4 space-y-10">
           <div className="space-y-3 text-center">
